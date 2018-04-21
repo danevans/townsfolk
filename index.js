@@ -10,7 +10,7 @@ const tickTemplate = (ticks) => html`ticks: <strong>${ticks}</strong>`;
 window.onload = () => {
   const tickDiv = document.getElementById('tickDiv');
 
-  const board = new Board(document.getElementById('container'), 20, 80);
+  const board = new Board(document.getElementById('container'), 20, 30);
   const characterForm = new CharacterForm(document.getElementById('characterCreator'), characters, board);
   const characterList = new CharacterTable(document.getElementById('characterList'), characters);
 

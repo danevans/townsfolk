@@ -37,4 +37,41 @@ export default class Board {
   render() {
     render(boardTemplate(this.grid), this.node);
   }
+
+  validCoords(x, y) {
+    return this.grid[y] && this.grid[y][x];
+  }
+
+  // Checks diagonals too
+  cellsAround(cell) {
+    return [
+      this.validCoords(cell.x - 1, cell.y - 1),
+      this.validCoords(cell.x, cell.y - 1),
+      this.validCoords(cell.x + 1, cell.y - 1),
+
+      this.validCoords(cell.x - 1, cell.y),
+      this.validCoords(cell.x + 1, cell.y),
+
+      this.validCoords(cell.x - 1, cell.y + 1),
+      this.validCoords(cell.x, cell.y + 1),
+      this.validCoords(cell.x + 1, cell.y + 1),
+    ].filter(c => c);
+  }
+
+  checkAround(cell, predicate) {
+    return this.cellsAround(cell).find(predicate);
+  }
+
+  find(predicate) {
+    return this.grid.reduce((acc, row) => {
+      if (acc) {
+        return acc;
+      } else {
+        const cell = row.find(predicate);
+        if (cell) {
+          return cell;
+        }
+      }
+    }, undefined);
+  }
 }

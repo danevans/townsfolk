@@ -1,7 +1,8 @@
 import { html, render } from 'lit-html';
 import Board from './board';
-import CharacterTable from './character/index'
-import CharacterForm from './character/create'
+import CharacterTable from './character/index';
+import CharacterForm from './character/create';
+import Item from './item/model';
 
 const characters = [];
 
@@ -13,6 +14,8 @@ window.onload = () => {
   const board = new Board(document.getElementById('container'), 20, 30);
   const characterForm = new CharacterForm(document.getElementById('characterCreator'), characters, board);
   const characterList = new CharacterTable(document.getElementById('characterList'), characters);
+
+  const food = new Item(board.grid[10][15], Symbol.for('food'), 'o', 'brown');
 
   const processTick = () => {
     board.render();

@@ -1,5 +1,9 @@
 import { html } from 'lit-html';
 
+function isFood(cell) {
+  return cell.char && cell.char.type === Symbol.for('food');
+}
+
 let id = 1;
 
 export default class Character {
@@ -63,10 +67,20 @@ export default class Character {
 
   act(board) {
     if (!this.diedAt) {
+      // TODO: make this only happen sometimes, more likely the more hungry they already are
       this.hunger++;
 
       if (this.hunger > 99) {
         this.die(board.ticks);
+      } else if (this.hunger > 33) {
+        if (board.checkAround(this.cell, isFood)) {
+          this.eat(25);
+        } else {
+          const food = board.find(isFood);
+          if (food) {
+            this.moveToward(board, food.char);
+          }
+        }
       }
     }
   }

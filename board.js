@@ -45,16 +45,16 @@ export default class Board {
   // Checks diagonals too
   cellsAround(cell) {
     return [
-      this.validCoords(cell.x - 1, cell.y - 1),
+      // this.validCoords(cell.x - 1, cell.y - 1),
       this.validCoords(cell.x, cell.y - 1),
-      this.validCoords(cell.x + 1, cell.y - 1),
+      // this.validCoords(cell.x + 1, cell.y - 1),
 
       this.validCoords(cell.x - 1, cell.y),
       this.validCoords(cell.x + 1, cell.y),
 
-      this.validCoords(cell.x - 1, cell.y + 1),
+      // this.validCoords(cell.x - 1, cell.y + 1),
       this.validCoords(cell.x, cell.y + 1),
-      this.validCoords(cell.x + 1, cell.y + 1),
+      // this.validCoords(cell.x + 1, cell.y + 1),
     ].filter(c => c);
   }
 

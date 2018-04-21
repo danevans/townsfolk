@@ -6,6 +6,8 @@ Characters can be created and placed on the board. Once on the board the charact
 
 Once a character gets hungry enough (33) they will seek out food and move towards it. If they are next to food they'll feed themselves.
 
+If their needs are met the townsfolk will move into adjacent, unoccupied squares randomly.
+
 ## Future Improvements
 
 - Thirst/water similar to hunger/food.

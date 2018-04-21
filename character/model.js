@@ -1,4 +1,5 @@
 import { html } from 'lit-html';
+import { randItem, randBool } from '../random';
 
 function isFood(cell) {
   return cell.char && cell.char.type === Symbol.for('food');
@@ -80,6 +81,11 @@ export default class Character {
           if (food) {
             this.moveToward(board, food.char);
           }
+        }
+      } else {
+        const dest = randItem(board.cellsAround(this.cell).filter(c => !c.char));
+        if (dest && randBool()) {
+          this.moveTo(board, dest);
         }
       }
     }

@@ -1,3 +1,17 @@
+body {
+  font-family: fantasy;
+}
+
 .board {
   font-family: monospace;
+}
+
+table {
+  width: 100%;
+  max-width: 500px;
+  table-layout: fixed;
+}
+
+td {
+  text-align: center;
 }

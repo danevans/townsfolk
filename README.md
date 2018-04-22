@@ -8,6 +8,10 @@ Once a character gets hungry enough (33) they will seek out food and move toward
 
 If their needs are met the townsfolk will move into adjacent, unoccupied squares randomly.
 
+## Demo
+
+View it running [here](https://danevans.github.io/townsfolk/)
+
 ## Future Improvements
 
 - Thirst/water similar to hunger/food.

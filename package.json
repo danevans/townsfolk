@@ -1,7 +1,7 @@
 {
   "name": "townsfolk",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Danston <thedanevans@gmail.com>",
   "license": "MIT",
   "devDependencies": {

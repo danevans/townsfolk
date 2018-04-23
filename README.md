@@ -14,6 +14,8 @@ View it running [here](https://danevans.github.io/townsfolk/)
 
 ## TODO
 
+More in depth [notes](NOTES.md) on overall design.
+
 ### Improvements
 
 - Thirst/water similar to hunger/food.
@@ -28,6 +30,7 @@ View it running [here](https://danevans.github.io/townsfolk/)
 - Pathing and impassable objects (other characters, walls, water).
 - Characters interacting, e.g. fighting.
   - Hit points or other health indicators.
+- Tiredness and sleep.
 
 ### Issues
 

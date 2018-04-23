@@ -12,7 +12,9 @@ If their needs are met the townsfolk will move into adjacent, unoccupied squares
 
 View it running [here](https://danevans.github.io/townsfolk/)
 
-## Future Improvements
+## TODO
+
+### Improvements
 
 - Thirst/water similar to hunger/food.
 - Thirst/hunger increase slightly randomly.
@@ -20,12 +22,16 @@ View it running [here](https://danevans.github.io/townsfolk/)
 - Other items on the board for the characters to interact with.
   - Tools and resources
   - Better entity class to handle all types
+- Multiple items are going to need to occupy one cell
 - Jobs the characters can be assigned which will change what they choose to do.
 - Other effects of aging.
 - Pathing and impassable objects (other characters, walls, water).
 - Characters interacting, e.g. fighting.
   - Hit points or other health indicators.
-- More natural water such as streams.
+
+### Issues
+
+- Since each cell has one entity if they walk over each other they can remove a stationary item from the board (such as food or a corpse).
 
 ## Usage
 
